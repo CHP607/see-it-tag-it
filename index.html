@@ -650,7 +650,7 @@ function submitTag() {
   postToFlow({ action:'submit', tagId:tag.tagId, title:tag.title, desc:tag.desc,
     area:tag.area, type:tag.type, priority:tag.priority, asset:tag.asset,
     reporter:tag.reporter, assignedTo:tag.assignedTo, shift:tag.shift,
-    status:tag.status, created:tag.created, updated:tag.updated, notes:'' });
+    status:tag.status, created:tag.created, updated:tag.updated, notes:'', photo:tag.photo });
   closeSheet('new-ov');
   renderTags();
   showToast(t.toast.filed(tag.tagId, selPri), selPri==='critical'?'red':'blue');
